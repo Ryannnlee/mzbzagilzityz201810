@@ -1,0 +1,368 @@
+/* comparison page ----------------------- */
+
+#comparison {
+    #keyvision {
+        background-image: url(../images/slide-kv/comparison-kv-mo.jpg);
+        background-color: #000;
+        .kv-headtxt {
+            text-align: left;
+            color: #fff;
+            h1 {
+                color: #fff;
+            }
+            @media (min-width: 992px) {
+                width: 30%;
+                top: 50%;
+                -webkit-transform: translate(-170%, 150%);
+                -ms-transform: translate(-170%, 150%);
+                -o-transform: translate(-170%, 150%);
+                transform: translate(-170%, 150%);
+                h1 {
+                    text-align: right;
+                }
+            }
+            @media screen and (max-width: 992px) and (orientation:landscape) {
+                width: 30%;
+                top: 50%;
+                -webkit-transform: translate(-150%, 100%);
+                -ms-transform: translate(-150%, 100%);
+                -o-transform: translate(-150%, 100%);
+                transform: translate(-150%, 100%);
+                h1 {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    #section1 {
+        padding: 50px 0;
+        @media (min-width: 992px) {
+            padding: 100px 0;
+        }
+        background-image: url(../images/comparison/comparison-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center top;
+        color: #fff;
+        &,
+        .planCont .dpp-select li {
+            font-size: 14px;
+            @media (min-width: 576px) {
+                font-size: 16px;
+            }
+            @media (min-width: 992px) {
+                font-size: 18px;
+            }
+        }
+        h2 {
+            text-align: center;
+            color: $mb-blue;
+            font-size: 2.1em;
+            padding-bottom: 1.6em;
+        }
+        .compare {
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 1em 1.5em;
+                @media (min-width: 767px) {
+                    border-spacing: 2em;
+                }
+                td {
+                    width: 50%;
+                    text-align: center;
+                    &:last-of-type {
+                        display: none;
+                    }
+                    // padding: 1em;
+                    @media (min-width: 767px) {
+                        width: 33.3333%;
+                        text-align: left;
+                        &:last-of-type {
+                            display: table-cell;
+                        }
+                    }
+                }
+            }
+            img {
+                width: 100%;
+            }
+            .close {
+                position: absolute;
+                top: -20px;
+                right: 0;
+                display: block;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 1px;
+                    top: 50%;
+                    left: 50%;
+                    background-color: #474747;
+                    transition: background-color .5s;
+                }
+                &:before {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &:after {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+                &:hover {
+                    &:before,
+                    &:after {
+                        background-color: $mb-blue;
+                    }
+                }
+            }
+        }
+        .compare-head,
+        #compareFixedBar {
+            position: relative;
+            td {
+                position: relative;
+                border-bottom: 1px solid #dddddd;
+                @media (min-width: 767px) {
+                    border-bottom: none;
+                }
+            }
+            td.noadd {
+                height: 210px;
+                border: solid 1px #313131;
+                cursor: pointer;
+                transition: border .5s;
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 35px;
+                    height: 1px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #474747;
+                    transition: background-color .5s;
+                }
+                &:before {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+                &:hover {
+                    border: solid 1px $mb-blue;
+                    &:before,
+                    &:after {
+                        background-color: $mb-blue;
+                    }
+                }
+            }
+        }
+        #compareFixedBar {
+            position: fixed !important;
+            padding: 10px 0;
+            width: 100%;
+            top: -100px;
+            left: 0;
+            background-color: #000;
+            background-image: -webkit-linear-gradient(bottom, #080808, #272727 94%);
+            background-image: -o-linear-gradient(bottom, #080808, #272727 94%);
+            background-image: linear-gradient(to top, #080808, #272727 94%);
+            -webkit-box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.35);
+            box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.35);
+            -webkit-animation: optop .3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+            animation: optop .3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+            z-index: 98;
+            transition: top .3s;
+            .compare-title {
+                font-size: 1em;
+                border-bottom: none;
+            }
+            table {
+                border-spacing: 2em 0;
+            }
+            td {
+                border-bottom: 1px solid #dddddd;
+            }
+            td.noadd {
+                height: 30px;
+            }
+            &.display {
+                top: 0;
+            }
+        }
+        .compare-img {
+            img {
+                display: block;
+                max-width: 489px;
+                width: 95%;
+            }
+        }
+        .compare-title {
+            font-size: 1.2em;
+            padding: 15px 0px;
+            // border-bottom: 1px solid #dddddd;
+            @media (min-width: 767px) {
+                font-size: 1.3em;
+                padding: 15px 10px;
+                border-bottom: 1px solid #dddddd;
+            }
+        }
+        .compare-content {
+            margin-bottom: 1em;
+            border-radius: 10px;
+            overflow: hidden;
+            @media (min-width: 767px) {
+                // margin-bottom: 50px;
+            }
+            .planHead {
+                position: relative;
+                font-size: 1.2em;
+                line-height: 1.2em;
+                padding: 1.5em 2em;
+                margin-top: 50px;
+                background-color: rgba(125, 125, 125, .1);
+                cursor: pointer;
+                span {
+                    font-size: 0.85em;
+                    color: $mb-blue2;
+                }
+                &:nth-of-type(1) {
+                    margin-top: 0;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 21px;
+                    height: 10px;
+                    margin: auto 0;
+                    top: 0;
+                    right: 2em;
+                    bottom: 0;
+                    background-image: url(../images/common/down-arrow.svg);
+                    transform: rotate(0deg);
+                    // transition: transform .3s;
+                }
+                &.active {
+                    &:after {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+            .planCont {
+                .dpp-select {
+                    // padding: 0 2em;
+                    @media (min-width: 767px) {
+                        padding: 0 2em;
+                    }
+                    background-color: rgba(125, 125, 125, .1);
+                    ul {
+                        font-size: 0;
+                    }
+                    li {
+                        display: inline-block;
+                        width: 33.333%;
+                        color: #7e7e7e;
+                        line-height: 1.5em;
+                        text-align: center;
+                        padding: 5px 5px 0;
+                        cursor: pointer;
+                        @media (min-width: 767px) {
+                            width: 15%;
+                            padding: 0px;
+                            margin-right: 10px;
+                        }
+                        a {
+                            padding: 10px 0;
+                            color: #7e7e7e;
+                            display: block;
+                            border-bottom: 1px solid #7d7d7d;
+                            @media (min-width: 767px) {
+                                padding: 0;
+                            }
+                        }
+                        span {
+                            font-size: 13px;
+                        }
+                        &:hover,
+                        &.ui-tabs-active {
+                            color: $mb-blue2;
+                            a {
+                                color: $mb-blue2;
+                                border-bottom: 1px solid $mb-blue2;
+                            }
+                        }
+                    }
+                }
+                .detail {
+                    padding: 50px 0;
+                    background-color: rgba(125, 125, 125, .2);
+                    .headTxt {
+                        font-size: 1em;
+                        line-height: 1.2em;
+                        padding: 0 15px;
+                        margin-bottom: 15px;
+                    }
+                    .amount {
+                        font-size: 1.6em;
+                        padding: 0 15px;
+                        line-height: 1.2em;
+                    }
+                    td {
+                        font-size: 1.6em;
+                        padding: 0;
+                        line-height: 1.2em;
+                        @media (min-width: 767px) {
+                            padding: 0 15px;
+                        }
+                        &:before {
+                            content: '';
+                            font-size: 0.6em;
+                            letter-spacing: 1epx;
+                            display: block;
+                            @media (min-width: 767px) {
+                                letter-spacing: 2.2px;
+                            }
+                        }
+                        &.noadd {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                    .down-payment {
+                        td {
+                            &:before {
+                                content: '頭期款';
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .ag-monthly-payment {
+                        td {
+                            &:before {
+                                content: 'Agility月付款';
+                                color: $mb-blue2;
+                            }
+                        }
+                    }
+                    .bs-monthly-payment {
+                        td {
+                            &:before {
+                                content: '一般分期月付款';
+                                color: #adadad;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .lean-more {
+            padding: 1em 0;
+        }
+    }
+}

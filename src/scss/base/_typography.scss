@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Daimler-Corpo-AC";
+    src: url("../css/fonts/Daimler-CAC-Reg-eu.eot");
+    src: url("../css/fonts/Daimler-CAC-Reg-eu.eot?#iefix") format("embedded-opentype"), url("../css/fonts/Daimler-CAC-Reg-eu.woff2") format("woff2"), url("../css/fonts/Daimler-CAC-Reg-eu.woff") format("woff"), url("../css/fonts/Daimler-CAC-Reg-eu.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Daimler-Corpo-S";
+    src: url("../css/fonts/Daimler-CS-Reg-eu.eot");
+    src: url("../css/fonts/Daimler-CS-Reg-eu.eot?#iefix") format("embedded-opentype"), url("../css/fonts/Daimler-CS-Reg-eu.woff2") format("woff2"), url("../css/fonts/Daimler-CS-Reg-eu.woff") format("woff"), url("../css/fonts/Daimler-CS-Reg-eu.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Daimler-Corpo-S";
+    src: url("../css/fonts/Daimler-CS-Bold-eu.eot");
+    src: url("../css/fonts/Daimler-CS-Bold-eu.eot?#iefix") format("embedded-opentype"), url("../css/fonts/Daimler-CS-Bold-eu.woff2") format("woff2"), url("../css/fonts/Daimler-CS-Bold-eu.woff") format("woff"), url("../css/fonts/Daimler-CS-Bold-eu.ttf") format("truetype");
+    font-weight: 700;
+}
+
+body {
+    font-family: "微軟正黑體", "Microsoft JhengHei", 'Century Gothic', CenturyGothic, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+.MingLiU {
+    font-family: MingLiU, '新細明體', serif !important;
+    font-weight: 400 !important;
+}
+
+.Daimler-Corpo-A {
+    font-family: Daimler-Corpo-AC, "Times New Roman", serif !important;
+    font-weight: 400;
+    font-stretch: condensed;
+}

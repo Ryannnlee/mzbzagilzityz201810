@@ -1,0 +1,57 @@
+// Button Style
+button {
+    border: none;
+    font-family: "微軟正黑體", "Microsoft JhengHei", 'Century Gothic', CenturyGothic, sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn-fill {
+    mix-blend-mode: undefined;
+    background-image: -moz-linear-gradient(to top, #0077b4, #28aae1 51%, #28aae1);
+    background-image: -webkit-linear-gradient(to top, #0077b4, #28aae1 51%, #28aae1);
+    background-image: linear-gradient(to top, #0077b4, #28aae1 51%, #28aae1);
+    box-shadow: 0px 2px 4px 0 #000000;
+    transition: color .3s;
+    color: #fff;
+    &:hover {
+        // background-image: -moz-linear-gradient(to top, #28aae1, #28aae1 51%, #0077b4);
+        // background-image: -webkit-linear-gradient(to top, #28aae1, #28aae1 51%, #0077b4);
+        // background-image: linear-gradient(to top, #28aae1, #28aae1 51%, #0077b4);
+    }
+}
+
+.btn-border {
+    color: #858585;
+    mix-blend-mode: undefined;
+    border: 1px solid $mb-blue;
+    transition: color .3s;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.btn-fill,
+.btn-border {
+    padding: 10px 25px;
+    font-size: 16px;
+    letter-spacing: 4.4px;
+    @media (min-width: 576px) {
+        padding: 0;
+        width: 145px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 1.91em;
+    }
+    @media (min-width: 992px) {
+        font-size: 22px;
+    }
+}
+
+a.blueTxt {
+    color: $mb-blue;
+    transition: color .3s;
+    &:hover {
+        color: #5aaae1;
+    }
+}

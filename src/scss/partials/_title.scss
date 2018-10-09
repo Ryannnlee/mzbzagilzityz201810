@@ -1,0 +1,35 @@
+// Title Style
+h2 {
+    &.title-line {
+        &:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 20px auto;
+            background-color: $mb-blue;
+        }
+    }
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.remark {
+    font-size: 14px;
+    line-height: 1.5em;
+    p {
+        padding-bottom: 10px;
+    }
+}
+
+.CenterTxt {
+    text-align: center;
+}
+
+ul.numLst,
+ol.numLst {
+    list-style: decimal;
+    margin-left: 25px;
+}

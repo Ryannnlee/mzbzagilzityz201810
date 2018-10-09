@@ -1,0 +1,11 @@
+{
+
+  "liveSassCompile.settings.formats": [{
+    "format": "expanded",
+    //expanded  compact
+    "extensionName": ".css",
+    "savePath": "/build/css/"
+  }]
+
+
+}

@@ -1,0 +1,213 @@
+footer {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container {
+        position: relative;
+    }
+    &,
+    .container {
+        height: 200px;
+        font-size: 14px;
+        text-align: center;
+        @media (min-width: 576px) {
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            height: 400px;
+        }
+        @media (min-width: 992px) {
+            height: 655px;
+            font-size: 18px;
+            text-align: left;
+        }
+    }
+    .shareBtn span {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        &.txt {
+            display: none;
+            @media (min-width: 992px) {
+                display: inline-block;
+                font-size: 0.8em;
+                cursor: auto;
+            }
+        }
+        .share-bg {
+            fill: #010101;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+        }
+        .share-img {
+            fill: #FFFFFF;
+        }
+        &.fb:hover .share-bg {
+            fill: #3a589b;
+        }
+        &.Line:hover .share-bg {
+            fill: #3acd01;
+        }
+        &.twitter:hover .share-bg {
+            fill: #1cb7eb;
+        }
+    }
+    a {
+        color: #fff;
+        display: block;
+        transition: color .3s;
+        &:hover {
+            color: #00adef;
+        }
+    }
+    @media (min-width: 992px) {
+        a {
+            display: inline-block;
+        }
+        &.black {
+            color: #000;
+            a {
+                color: #000;
+                &:hover {
+                    color: #00adef;
+                }
+            }
+            li {
+                text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+                border-bottom: none;
+            }
+        }
+    }
+    ul.ft-nav,
+    .mbfs-logo {
+        bottom: -200px;
+        @media (min-width: 576px) {
+            bottom: -300px;
+        }
+        @media (min-width: 768px) {
+            bottom: -400px;
+        }
+        @media (min-width: 992px) {
+            bottom: 115px;
+        }
+    }
+    ul.ft-nav {
+        position: relative;
+        padding: 20px 0;
+        width: 80%;
+        margin: 0 auto;
+        @media (min-width: 992px) {
+            position: absolute;
+            left: 15px;
+            padding: 0;
+            width: 100%;
+        }
+        li {
+            font-family: "微軟正黑體", "Microsoft JhengHei";
+            font-size: 1em;
+            line-height: 2.44em;
+            border-bottom: 1px solid #303030;
+            @media (min-width: 992px) {
+                border-bottom: none;
+            }
+            &.last {
+                border-bottom: none;
+            }
+        }
+    }
+    // MBFS Logo Set
+    .mbfs-logo {
+        position: relative;
+        width: 230px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        font-size: 1em;
+        line-height: 2.44em;
+        @media (min-width: 992px) {
+            position: absolute;
+            right: 15px;
+            width: 250px;
+            padding-bottom: 0;
+        }
+    }
+    .mbfs-logo-w {
+        display: block;
+    }
+    .mbfs-logo-b {
+        display: none;
+    }
+    .mbfs-shadow {
+        display: none;
+    }
+    &.mbfs-shadow {
+        .mbfs-shadow {
+            display: block;
+        }
+    }
+    @media (min-width: 992px) {
+        .mbfs-logo-w {
+            display: none;
+        }
+        .mbfs-logo-b {
+            display: block;
+        }
+    }
+    .ft-liner {
+        width: 100%;
+        height: 5px;
+        display: block;
+        position: absolute;
+        bottom: -280px;
+        left: 0;
+        background: $mb-blue;
+        @media (min-width: 992px) {
+            background: #000;
+            bottom: 0;
+        }
+    }
+}
+
+.bgft01 {
+    background-image: url('../images/footer/bg-footer01-mo.jpg');
+    @media (min-width: 992px) {
+        background-image: url('../images/footer/bg-footer01.jpg');
+    }
+}
+
+.bgft02 {
+    background-image: url('../images/footer/bg-footer02-mo.jpg');
+    background-position: right center;
+    @media (min-width: 992px) {
+        background-image: url('../images/footer/bg-footer02.jpg');
+    }
+}
+
+.bgft03 {
+    background-image: url('../images/footer/bg-footer03-mo.jpg');
+    background-position: right center;
+    @media (min-width: 992px) {
+        background-image: url('../images/footer/bg-footer03.jpg');
+    }
+}
+
+.bgft04 {
+    background-image: url('../images/footer/bg-footer04-mo.jpg');
+    background-position: left center;
+    @media (min-width: 992px) {
+        background-image: url('../images/footer/bg-footer04.jpg');
+    }
+}
+
+.bgft05 {
+    background-image: url('../images/footer/bg-footer05-mo.jpg');
+    background-position: left center;
+    @media (min-width: 992px) {
+        background-image: url('../images/footer/bg-footer05.jpg');
+    }
+}

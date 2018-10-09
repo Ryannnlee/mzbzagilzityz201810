@@ -1,0 +1,203 @@
+/* s1 ----------------------- */
+
+#detail {
+    #keyvision {
+        background-image: url(../images/slide-kv/detail-kv-mo.jpg);
+        background-color: #000;
+        .kv-headtxt {
+            text-align: left;
+            h1 {
+                color: #fff;
+            }
+            @media (min-width: 992px) {
+                width: 30%;
+                top: 30%;
+                -webkit-transform: translate(25%, -50%);
+                -ms-transform: translate(25%, -50%);
+                -o-transform: translate(25%, -50%);
+                transform: translate(25%, -50%);
+                h1 {
+                    text-align: right;
+                    color: #000;
+                }
+            }
+            @media screen and (max-width: 992px) and (orientation:landscape) {
+                width: 30%;
+                top: 50%;
+                -webkit-transform: translate(25%, -50%);
+                -ms-transform: translate(25%, -50%);
+                -o-transform: translate(25%, -50%);
+                transform: translate(25%, -50%);
+                h1 {
+                    text-align: right;
+                    color: #000;
+                }
+            }
+        }
+    }
+    #section1 {
+        padding: 50px 0;
+        @media (min-width: 768px) {
+            background-image: url(../images/calculate/calculate-bg.jpg);
+        }
+        @media (min-width: 992px) {
+            padding: 100px 0;
+        }
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center top;
+        color: #fff;
+        &,
+        .car-detail .info,
+        .down-payment-percent,
+        .terms,
+        .down-payment,
+        .ag-monthly-payment,
+        .basic-monthly-payment {
+            font-size: 14px;
+            @media (min-width: 576px) {
+                font-size: 16px;
+            }
+            @media (min-width: 992px) {
+                font-size: 18px;
+            }
+        }
+        h2 {
+            text-align: center;
+            color: $mb-blue;
+            font-size: 2.1em;
+            padding: 0;
+            @media (min-width: 768px) {
+                padding-bottom: 1.6em;
+            }
+        }
+        .car-detail {
+            font-size: 0;
+            padding: 50px 0;
+            width: 80%;
+            margin: 0 auto;
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+            .images,
+            .info {
+                display: inline-block;
+                width: 100%;
+                vertical-align: middle;
+            }
+            .images {
+                text-align: center;
+                @media (min-width: 768px) {
+                    width: 55%;
+                }
+                img {
+                    max-width: 455px;
+                    display: inline-block;
+                }
+            }
+            .info {
+                color: #fff;
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+                @media (min-width: 768px) {
+                    width: 45%;
+                    text-align: left;
+                }
+                a {
+                    color: $mb-blue;
+                }
+                h3 {
+                    font-family: Daimler-Corpo-AC, "Times New Roman", "微軟正黑體", "Microsoft JhengHei" !important;
+                    font-size: 2.2em;
+                    line-height: 1.2em;
+                    padding: 10px 15px;
+                    border-bottom: 1px solid #dddddd;
+                }
+                p {
+                    font-size: 1em;
+                    line-height: 1.5em;
+                    padding: 15px 15px;
+                }
+                a {
+                    font-size: 1em;
+                    padding: 15px;
+                    transition: color .3s;
+                    &:hover {
+                        color: #0088c6;
+                        color: rgba(90, 170, 225, 1);
+                    }
+                }
+            }
+        }
+        .agility-program-info {
+            h3 {
+                font-size: 1.7em;
+                color: #fff;
+                text-align: center;
+                padding: .6em .5em;
+                border-bottom: 1px solid #404040;
+                @media (min-width: 768px) {
+                    padding: .5em;
+                    text-align: left;
+                }
+            }
+            .control,
+            .resultChart {
+                font-size: 0;
+            }
+        }
+        .control,
+        .resultChart {
+            width: 100%;
+            margin: 0px auto;
+            padding: 0;
+            @media (min-width: 768px) {
+                padding: 50px 0;
+            }
+            @media (min-width: 992px) {
+                width: 90%;
+            }
+            .down-payment-percent,
+            .terms {
+                display: inline-block;
+                width: 100%;
+                padding: 3em 0;
+                @media (min-width: 768px) {
+                    width: 50%;
+                    padding: 0 3em;
+                }
+                @media (min-width: 992px) {
+                    // padding: 0 3em;
+                }
+                p {
+                    font-size: 1.4em;
+                    line-height: 1.2em;
+                }
+            }
+            #DPP-slider,
+            #terms-slider {
+                width: 90%;
+                margin: 1.4em auto;
+            }
+            .down-payment,
+            .ag-monthly-payment,
+            .basic-monthly-payment {
+                display: inline-block;
+                width: 100%;
+                padding: 1em;
+                text-align: center;
+                @media (min-width: 768px) {
+                    width: 33.333%;
+                }
+                @media (min-width: 992px) {
+                    padding: 0 3em;
+                }
+            }
+        }
+        .resultChart {
+            margin: 0px auto;
+            padding: 50px 0;
+        }
+    }
+}
