@@ -301,19 +301,19 @@ $page-fontsize: 14px;
                     }
                 }
             }
-            ::-webkit-input-placeholder {
+             ::-webkit-input-placeholder {
                 /* WebKit browsers */
                 color: $mb-blue;
             }
-            :-moz-placeholder {
+             :-moz-placeholder {
                 /* Mozilla Firefox 4 to 18 */
                 color: $mb-blue;
             }
-            ::-moz-placeholder {
+             ::-moz-placeholder {
                 /* Mozilla Firefox 19+ */
                 color: $mb-blue;
             }
-            :-ms-input-placeholder {
+             :-ms-input-placeholder {
                 /* Internet Explorer 10+ */
                 color: $mb-blue;
             }

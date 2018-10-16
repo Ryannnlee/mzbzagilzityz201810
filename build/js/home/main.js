@@ -1,4 +1,6 @@
-$(function() {
+"use strict";
+
+$(function () {
     $(window).scrollTop(0);
 
     // build tween
@@ -38,14 +40,12 @@ $(function() {
         }, 500);
     }
 
-
     function number(a, b, c, d, start) {
         if (d) {
             var e = start;
             var f = parseInt(d / a);
-            var g = setInterval(function() {
-                if (e - 1 < a) c.html(numberWithCommas(e));
-                else {
+            var g = setInterval(function () {
+                if (e - 1 < a) c.html(numberWithCommas(e));else {
                     c.html(numberWithCommas(b));
                     clearInterval(g);
                 }
@@ -58,7 +58,7 @@ $(function() {
     function runNumberValue() {
 
         if (is_enter === 0) {
-            $(".stats .num").each(function() {
+            $(".stats .num").each(function () {
                 var b = $(this);
                 var c = b.attr("data-num");
                 var d = b.attr("data-content");
@@ -69,298 +69,234 @@ $(function() {
         }
     }
 
-    var tween1 = new TimelineMax()
-        .add([
-            TweenMax.fromTo("#txtHead", 2, {
-                y: 100,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: Power3.easeInOut
-            }),
-            TweenMax.fromTo("#Paragraph", 3, {
-                y: 100,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: Power3.easeInOut
-            })
-        ]);
+    var tween1 = new TimelineMax().add([TweenMax.fromTo("#txtHead", 2, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power3.easeInOut
+    }), TweenMax.fromTo("#Paragraph", 3, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power3.easeInOut
+    })]);
 
-    var tween2 = new TimelineMax()
-        .add([
-            TweenMax.fromTo("#txtHead2", 1, {
-                y: 100,
-                top: 0,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: Power3.easeInOut
-            }),
+    var tween2 = new TimelineMax().add([TweenMax.fromTo("#txtHead2", 1, {
+        y: 100,
+        top: 0,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power3.easeInOut
+    }), TweenMax.fromTo("#f1", 2, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power3.easeInOut
+    }), TweenMax.fromTo("#f2", 4, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power3.easeInOut
+    }), TweenMax.fromTo("#f3", 5, {
+        y: 100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: Power3.easeInOut
+    })]);
 
-            TweenMax.fromTo("#f1", 2, {
-                y: 100,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: Power3.easeInOut
-            }),
-            TweenMax.fromTo("#f2", 4, {
-                y: 100,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: Power3.easeInOut
-            }),
-            TweenMax.fromTo("#f3", 5, {
-                y: 100,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: Power3.easeInOut
-            }),
-
-
-        ]);
-
-    var tween3 = new TimelineMax()
-        .add([
-            TweenMax.fromTo("#frame1", 6, {
-                marginTop: '20%',
-                opacity: 0
-            }, {
-                marginTop: '0%',
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame2", 6, {
-                marginTop: '20%',
-                opacity: 0
-            }, {
-                marginTop: '0%',
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame3", 6, {
-                marginTop: '20%',
-                opacity: 0
-            }, {
-                marginTop: '0%',
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame1_subhead", 8, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame2_subhead", 8, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame3_subhead", 8, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame1_head", 9, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame2_head", 9, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame3_head", 9, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame1_txt", 10, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame2_txt", 10, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            }),
-            TweenMax.fromTo("#frame3_txt", 10, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: Power3.easeInOut,
-                delay: 5
-            })
-
-        ]);
-
-
-
-
+    var tween3 = new TimelineMax().add([TweenMax.fromTo("#frame1", 6, {
+        marginTop: '20%',
+        opacity: 0
+    }, {
+        marginTop: '0%',
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame2", 6, {
+        marginTop: '20%',
+        opacity: 0
+    }, {
+        marginTop: '0%',
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame3", 6, {
+        marginTop: '20%',
+        opacity: 0
+    }, {
+        marginTop: '0%',
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame1_subhead", 8, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame2_subhead", 8, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame3_subhead", 8, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame1_head", 9, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame2_head", 9, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame3_head", 9, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame1_txt", 10, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame2_txt", 10, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    }), TweenMax.fromTo("#frame3_txt", 10, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        ease: Power3.easeInOut,
+        delay: 5
+    })]);
 
     // build scene
     new ScrollMagic.Scene({
-            triggerElement: "#scene-car1",
-            duration: 500,
-            offset: 0
-        })
-        // .setTween(car1)
-        // .setClassToggle('.s1-bg-car','active-1')
-        .on("enter", function(event) {
-            $('.s1-bg-car').addClass('active-pos-1');
-        })
-        .on("leave", function(event) {
-            $('.s1-bg-car').removeClass('active-pos-1');
-        })
-        .setPin("#scene-car1")
-        .addTo(controller);
+        triggerElement: "#scene-car1",
+        duration: 500,
+        offset: 0
+    })
+    // .setTween(car1)
+    // .setClassToggle('.s1-bg-car','active-1')
+    .on("enter", function (event) {
+        $('.s1-bg-car').addClass('active-pos-1');
+    }).on("leave", function (event) {
+        $('.s1-bg-car').removeClass('active-pos-1');
+    }).setPin("#scene-car1").addTo(controller);
 
     new ScrollMagic.Scene({
-            triggerElement: "#scene-car2",
-            duration: 500,
-            offset: 0
-        })
-        // .setTween(car2)
-        // .setClassToggle('.s1-bg-car','active-1')
-        .on("enter", function(event) {
+        triggerElement: "#scene-car2",
+        duration: 500,
+        offset: 0
+    })
+    // .setTween(car2)
+    // .setClassToggle('.s1-bg-car','active-1')
+    .on("enter", function (event) {
+        $('.s1-bg-car').addClass('active-pos-2');
+    }).on("leave", function (event) {
+        $('.s1-bg-car').removeClass('active-pos-2');
+    }).setPin("#scene-car2").addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: "#scene3",
+        duration: 600,
+        offset: 0
+    }).setTween(tween3).setPin("#scene3").on("enter", function (event) {
+        $('.s1-bg-car').addClass('active-pos-2');
+    }).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: "#scene3",
+        duration: 1000,
+        offset: 600
+    }).setPin("#scene3")
+    // .on("enter", fadein3)
+    .on("enter", function (event) {
+        fadein3();
+        $('.s1-bg-car').addClass('active-pos-2');
+    }).on("leave", function (event) {
+        if (event.state === 'AFTER') {
             $('.s1-bg-car').addClass('active-pos-2');
-        })
-        .on("leave", function(event) {
-            $('.s1-bg-car').removeClass('active-pos-2');
-        })
-        .setPin("#scene-car2")
-
-    .addTo(controller);
+            fadeout3();
+        }
+    }).addTo(controller);
 
     new ScrollMagic.Scene({
-            triggerElement: "#scene3",
-            duration: 600,
-            offset: 0
-        })
-        .setTween(tween3)
-        .setPin("#scene3")
-        .on("enter", function(event) {
-            $('.s1-bg-car').addClass('active-pos-2');
-        })
-        .addTo(controller);
-    new ScrollMagic.Scene({
-            triggerElement: "#scene3",
-            duration: 1000,
-            offset: 600
-        })
-        .setPin("#scene3")
-        // .on("enter", fadein3)
-        .on("enter", function(event) {
-            fadein3();
-            $('.s1-bg-car').addClass('active-pos-2');
-        })
-        .on("leave", function(event) {
-            if (event.state === 'AFTER') {
-                $('.s1-bg-car').addClass('active-pos-2');
-                fadeout3();
-            }
-        })
-        .addTo(controller);
+        triggerElement: "#scene2",
+        duration: 600,
+        offset: 0
+    }).setTween(tween2).setPin("#scene2").on("enter", function (event) {
+        $('.s1-bg-car').addClass('active-pos-1');
+    }).addTo(controller);
 
     new ScrollMagic.Scene({
-            triggerElement: "#scene2",
-            duration: 600,
-            offset: 0
-        })
-        .setTween(tween2)
-        .setPin("#scene2")
-        .on("enter", function(event) {
-            $('.s1-bg-car').addClass('active-pos-1');
-        })
-        .addTo(controller);
+        triggerElement: "#scene2",
+        duration: 1000,
+        offset: 600
+    }).setPin("#scene2")
+    // .on("enter", fadein2)
+    .on("enter", function (event) {
+        fadein2();
+        $('.s1-bg-car').addClass('active-pos-1');
+    }).on("leave", function (event) {
+        if (event.state === 'AFTER') {
+            fadeout2();
+        }
+    }).addTo(controller);
 
     new ScrollMagic.Scene({
-            triggerElement: "#scene2",
-            duration: 1000,
-            offset: 600
-        })
-        .setPin("#scene2")
-        // .on("enter", fadein2)
-        .on("enter", function(event) {
-            fadein2();
-            $('.s1-bg-car').addClass('active-pos-1');
-        })
-        .on("leave", function(event) {
-            if (event.state === 'AFTER') {
-                fadeout2();
-            }
-        })
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-            triggerElement: "#scene1",
-            duration: 600,
-            offset: 0
-        })
-        .setTween(tween1)
-        .setPin("#scene1")
-        .on("enter", function(event) {
-            $('.s1-bg-car').addClass('active-pos-1');
-        })
-        // .addIndicators({name:"scene1"})
+        triggerElement: "#scene1",
+        duration: 600,
+        offset: 0
+    }).setTween(tween1).setPin("#scene1").on("enter", function (event) {
+        $('.s1-bg-car').addClass('active-pos-1');
+    })
+    // .addIndicators({name:"scene1"})
 
     .addTo(controller);
     new ScrollMagic.Scene({
-            triggerElement: "#scene1",
-            duration: 1000,
-            offset: 600
-        })
-        .setPin("#scene1")
-
-    .on("enter", function(event) {
-            fadein();
-            runNumberValue();
-            $('.s1-bg-car').addClass('active-pos-1');
-        })
-        .on("leave", function(event) {
-            if (event.state === 'AFTER') {
-                fadeout();
-            }
-        })
-        .addTo(controller);
-
-
-
+        triggerElement: "#scene1",
+        duration: 1000,
+        offset: 600
+    }).setPin("#scene1").on("enter", function (event) {
+        fadein();
+        runNumberValue();
+        $('.s1-bg-car').addClass('active-pos-1');
+    }).on("leave", function (event) {
+        if (event.state === 'AFTER') {
+            fadeout();
+        }
+    }).addTo(controller);
 });
 
 // section2 & section3 scroll AN
-$(function() {
-    $(document).ready(function() {
+$(function () {
+    $(document).ready(function () {
         var superscroll = $.superscrollorama();
         var screenw = $(window).width();
 
@@ -493,81 +429,67 @@ $(function() {
                 y: '0%',
                 opacity: 1
             }));
-
         } else {
-            superscroll.addTween('#section2', (new TimelineLite())
-                .append([TweenMax.fromTo($('.final-choose h2'), 1, {
-                    y: '50%',
-                    opacity: 0,
-                    immediateRender: true
-                }, {
-                    y: '0%',
-                    opacity: 1
-                })])
-                .append([TweenMax.fromTo($('.choose-box'), 1, {
-                    y: '25%',
-                    opacity: 0,
-                    immediateRender: true
-                }, {
-                    y: '0%',
-                    opacity: 1
-                })]), 600);
+            superscroll.addTween('#section2', new TimelineLite().append([TweenMax.fromTo($('.final-choose h2'), 1, {
+                y: '50%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            })]).append([TweenMax.fromTo($('.choose-box'), 1, {
+                y: '25%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            })]), 600);
 
-            superscroll.addTween('#section3', (new TimelineLite())
-                .append([TweenMax.fromTo($('#advantage-title'), .5, {
-                    y: '50%',
-                    opacity: 0,
-                    immediateRender: true
-                }, {
-                    y: '0%',
-                    opacity: 1
-                })])
-                .append([TweenMax.fromTo($('#advantage1'), 1, {
-                        y: '50%',
-                        opacity: 0,
-                        immediateRender: true
-                    }, {
-                        y: '0%',
-                        opacity: 1
-                    }),
-                    TweenMax.fromTo($('#advantage2'), 1, {
-                        y: '50%',
-                        opacity: 0,
-                        immediateRender: true
-                    }, {
-                        y: '0%',
-                        opacity: 1
-                    })
-                ])
-                .append([TweenMax.fromTo($('#advantage3'), 1, {
-                        y: '50%',
-                        opacity: 0,
-                        immediateRender: true
-                    }, {
-                        y: '0%',
-                        opacity: 1
-                    }),
-                    TweenMax.fromTo($('#advantage4'), 1, {
-                        y: '50%',
-                        opacity: 0,
-                        immediateRender: true
-                    }, {
-                        y: '0%',
-                        opacity: 1
-                    })
-                ]), 600);
+            superscroll.addTween('#section3', new TimelineLite().append([TweenMax.fromTo($('#advantage-title'), .5, {
+                y: '50%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            })]).append([TweenMax.fromTo($('#advantage1'), 1, {
+                y: '50%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            }), TweenMax.fromTo($('#advantage2'), 1, {
+                y: '50%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            })]).append([TweenMax.fromTo($('#advantage3'), 1, {
+                y: '50%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            }), TweenMax.fromTo($('#advantage4'), 1, {
+                y: '50%',
+                opacity: 0,
+                immediateRender: true
+            }, {
+                y: '0%',
+                opacity: 1
+            })]), 600);
         }
-
-
     });
-
-
 });
 
 // Section2 Tab change
 
-$(function() {
-    $('#section2 ul.chooseTab li').find('.headTxt').click(function() {
+$(function () {
+    $('#section2 ul.chooseTab li').find('.headTxt').click(function () {
         var $qa_content = $(this).next('div.conTxt');
         var $index = $(this).parent().index();
         if (!$qa_content.is(':visible')) {
@@ -579,11 +501,9 @@ $(function() {
 
         $('#section2 .slide .slide-img').removeClass('active');
         $('#section2 .slide .slide-img').eq($index).addClass('active');
-
     }).siblings().addClass('conTxt').hide();
 
     $('#section2 ul.chooseTab li:nth-of-type(1) .conTxt').show();
-
 });
 
 //youtube API
@@ -610,7 +530,7 @@ function onYouTubePlayerAPIReady() {
             }
         });
     } else {
-        $('#section4 .youtube-preview').click(function() {
+        $('#section4 .youtube-preview').click(function () {
             player = new YT.Player('youtube-video', {
                 height: '1920',
                 width: '1080',
@@ -631,8 +551,6 @@ function onYouTubePlayerAPIReady() {
             });
         });
     }
-
-
 }
 
 function onPlayerReady(event) {
